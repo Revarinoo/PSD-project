@@ -31,3 +31,7 @@ C:\Users\asus\Desktop\PSD-project\Project\Project\bin\Microsoft.CodeDom.Provider
 C:\Users\asus\Desktop\PSD-project\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
 C:\Users\asus\Desktop\PSD-project\Project\Project\obj\Debug\Project.dll
 C:\Users\asus\Desktop\PSD-project\Project\Project\obj\Debug\Project.pdb
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.SqlServer.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.xml
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,23 @@
+.fontt{
+    font-family:Georgia;
+}
+.logo-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 0%;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+.bg-dark{
+	background-color: #00ffff !important;
+}
+#mainNavbar .nav-link {
+    color: black;
+}
+#footer {
+	margin-top: 70px;
+	background-color: #00ffff;
+	padding-left: 50px;
+	padding-top: 92px;
+}
