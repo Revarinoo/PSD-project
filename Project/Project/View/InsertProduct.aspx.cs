@@ -43,47 +43,37 @@ namespace Project.View
 
         protected void btnInsertP_Click(object sender, EventArgs e)
         {
-            string name = productName.Text.ToString();
+            LabelInvalid.Visible = true;
             string errorMsg = "";
             try
             {
+                string name = productName.Text.ToString();
                 int stock = Int32.Parse(productStock.Text.ToString());
                 int price = Int32.Parse(productPrice.Text.ToString());
                 string type = DropDownListType.Text.ToString();
                 bool success = InsertProductController.Insert(name, stock, price, type, out errorMsg);
                 if (!success)
                 {
-                    LabelInvalid.Visible = true;
                     LabelInvalid.Text = errorMsg;
                 }
                 else
                 {
-                        if (!success)
-                        {
-                            LabelInvalid.Visible = true;
-                            LabelInvalid.Text = errorMsg;
-                        }
-                        else
-                        {
-                            
-                            var pt = InsertProductController.SearchByName(type);
-                            if (success)
-                            {
-                                InsertProductController.doInsert(pt.ProductTypeID, name, price, stock);
-                                GridViewInsertProduct.DataSource = ViewProductController.getAllProduct();
-                                GridViewInsertProduct.DataBind();
-                            }
-                            else
-                            {
-                                LabelInvalid.Visible = true;
-                                LabelInvalid.Text = errorMsg;
-                            }
-                        }
-                  }
+                    var pt = InsertProductController.SearchByName(type);
+                    if (success)
+                    {
+                        LabelInvalid.Text = errorMsg;
+                        InsertProductController.doInsert(pt.ProductTypeID, name, price, stock);
+                        GridViewInsertProduct.DataSource = ViewProductController.getAllProduct();
+                        GridViewInsertProduct.DataBind();
+                    }
+                    else
+                    {
+                        LabelInvalid.Text = errorMsg;
+                    }
+                }
                 
             }catch
             {
-                LabelInvalid.Visible = true;
                 LabelInvalid.Text = "Cannot be empty!";
             }
         }

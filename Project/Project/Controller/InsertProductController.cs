@@ -38,27 +38,24 @@ namespace Project.Controller
                 errorMsg = "Data Invalid!";
                 return false;
             }
+            else if(stock <= 1)
+            {
+                errorMsg = "Input must be 1 or more";
+                return false;
+            }
             else
             {
-                    if(stock <= 1)
-                    {
-                        errorMsg = "Input must be 1 or more";
-                        return false;
-                    }
-                    else
-                    {
-                        var pr = validateInsert(stock, price);
-                        if (pr != null && !name.Equals("") && stock != null && price != null)
-                        {
-                            errorMsg = "Success!";
-                            return true;
-                        }
-                        else
-                        {
-                            errorMsg = "Data Invalid!";
-                            return false;
-                        }
-                    }
+                var pr = validateInsert(stock, price);
+                if (pr != null && !name.Equals("") && stock != null && price != null)
+                {
+                    errorMsg = "Success!";
+                    return true;
+                }
+                else
+                {
+                    errorMsg = "Data Invalid!";
+                    return false;
+                }
             }
         }
     }

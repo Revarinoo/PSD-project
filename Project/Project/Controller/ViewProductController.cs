@@ -23,23 +23,28 @@ namespace Project.Controller
             {
                 flag = 0;
                 ran = rand.Next(firstID, lastID);
-                for (int i = 0; i < 5; i++)
+                bool IsEmpty = HomeHandler.checkProduct(ran);
+                if(IsEmpty == true)
                 {
-                    if (ran == arr[i])
+                    for (int i = 0; i < 5; i++)
                     {
-                        flag = -1;
-                        break;
+                        if (ran == arr[i])
+                        {
+                            flag = -1;
+                            break;
+                        }
+                        else
+                        {
+                            flag = 1;
+                        }
                     }
-                    else
+                    if (flag == 1)
                     {
-                        flag = 1;
+                        arr[j] = ran;
+                        j++;
                     }
                 }
-                if (flag == 1)
-                {
-                    arr[j] = ran;
-                    j++;
-                }
+                
             } while (j < 5);
             int a, b, c, d, e;
             a = arr[0]; b = arr[1]; c = arr[2]; d = arr[3]; e = arr[4];

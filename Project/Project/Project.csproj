@@ -131,6 +131,7 @@
     <Content Include="Model\Tokobedia.edmx.diagram">
       <DependentUpon>Tokobedia.edmx</DependentUpon>
     </Content>
+    <Content Include="View\DeleteProduct.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\InsertProduct.aspx" />
     <Content Include="View\Login.aspx" />
@@ -147,20 +148,29 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="View\UpdateProduct.aspx" />
+    <Content Include="View\UpdateProducts.aspx" />
+    <Content Include="View\ViewCart.aspx" />
     <Content Include="View\ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\DeleteProductController.cs" />
     <Compile Include="Controller\InsertProductController.cs" />
+    <Compile Include="Controller\UpdateProductController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\ViewCartController.cs" />
     <Compile Include="Controller\ViewProductController.cs" />
     <Compile Include="Factory\ProductFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\DeleteProductHandler.cs" />
     <Compile Include="Handler\HomeHandler.cs" />
     <Compile Include="Handler\InsertProductHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
+    <Compile Include="Handler\UpdateProductHandler.cs" />
+    <Compile Include="Handler\ViewCartHandler.cs" />
     <Compile Include="Handler\ViewProductHandler.cs" />
     <Compile Include="Model\Cart.cs">
       <DependentUpon>Tokobedia.tt</DependentUpon>
@@ -202,11 +212,20 @@
       <DependentUpon>Tokobedia.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CartRepository.cs" />
+    <Compile Include="Repository\DetailedCart.cs" />
     <Compile Include="Repository\DetailedProduct.cs" />
-    <Compile Include="Repository\DetailedProductType.cs" />
+    <Compile Include="Repository\DetailTransactionRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\ProductTypeRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="View\DeleteProduct.aspx.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\DeleteProduct.aspx.designer.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,6 +267,27 @@
     </Compile>
     <Compile Include="View\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProduct.aspx.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProduct.aspx.designer.cs">
+      <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProducts.aspx.cs">
+      <DependentUpon>UpdateProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProducts.aspx.designer.cs">
+      <DependentUpon>UpdateProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
