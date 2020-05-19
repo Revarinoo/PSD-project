@@ -2,14 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="buttonInsertProduct" runat="server" class="btn btn-outline-info" Text="Insert Product" Visible="False" OnClick="buttonInsertProduct_Click" />
-    &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="buttonUpdateProduct" runat="server" class="btn btn-outline-info" Text="Update Product" Visible="False" OnClick="buttonUpdateProduct_Click" />
-    &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="buttonDeleteProduct" runat="server" class="btn btn-outline-info" Text="Delete Product" Visible="False" OnClick="buttonDeleteProduct_Click" />
-
+    
     <br />
     <br />
     <br />
@@ -25,8 +18,30 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button Text="Insert" class="btn btn-outline-light py-0" OnClick="InsertProduct_Click" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton OnClick="UpdateProduct_Click" ID="UpdateProduct" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("ProductID")%>' runat="server" >Update</asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+            <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton OnClick="DeleteProduct_Click" ID="DeleteProduct" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("ProductID")%>' runat="server" >Delete</asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
         </asp:GridView>
     </div>
+    <asp:Label Visible="false" ID="lblDelete" Text="Label" runat="server" />
     <br />
     <br />
     <br />

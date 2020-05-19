@@ -35,8 +35,8 @@ namespace Project.View
 
         protected void UpdateP_Click(object send, EventArgs e)
         {
-            int id = Int32.Parse((send as LinkButton).CommandArgument);
-            Response.Redirect("UpdateProducts.aspx?id=" + id);
+            int ProductID = Int32.Parse((send as LinkButton).CommandArgument);
+            Response.Redirect("UpdateProducts.aspx?ProductID=" + ProductID);
         }
     }
 }

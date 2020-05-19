@@ -1,4 +1,5 @@
-﻿using Project.Repository;
+﻿using Project.Model;
+using Project.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,21 @@ namespace Project.Handler
         public static List<DetailedProduct> getProduct()
         {
             return ProductRepository.getProduct();
+        }
+
+        public static void deleteProduct(int id)
+        {
+            ProductRepository.DeleteProduct(id);
+        }
+
+        public static Product searchProductByID(int id)
+        {
+            return ProductRepository.searchByID(id);
+        }
+
+        public static DetailTransaction searchDetailTransactionByID(int id)
+        {
+            return DetailTransactionRepository.searchByID(id);
         }
     }
 }

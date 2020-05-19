@@ -37,7 +37,6 @@ namespace Project.View
             String email = TxtMail.Text.ToString();
             String pass = TxtPass.Text.ToString();
             String errorMsg = "";
-            TokobediaEntities dbEntity = new TokobediaEntities();
             User usr = AuthController.SearchByEmail(email);
             bool success = AuthController.doLogin(email, pass, out errorMsg);
             if(!success)

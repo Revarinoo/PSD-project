@@ -7,10 +7,10 @@ namespace Project.Repository
 {
     public class DetailedCart
     {
-        public int ProductID { get; set; }
-        public string ProductName { get; set; }
-        public int ProductPrice { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Price { get; set; }
         public int Quantity { get; set; }
-        public Int64 subtotal { get; set; }
+        public Int64 Subtotal { get; set; }
     }
 }

@@ -8,7 +8,7 @@
         <asp:Label ID="LblMessage" class="fontt font-weight-bold" runat="server" Text="Welcome"></asp:Label>
     </p>
     <div class="col-md-12 ">
-        <p class="auto-style1">
+        <p class="auto-style1 text-center">
             <asp:Button ID="btnViewProduct" runat="server" class="btn btn-outline-info" Text="View Product" OnClick="DoViewProduct" />
 
             &nbsp;&nbsp;&nbsp;
@@ -21,8 +21,18 @@
     <asp:Button ID="btnViewProductType" runat="server" class="btn btn-outline-info" Text="View Product Type" OnClick="btnViewProductType_Click" />
             &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnInsertProductType" runat="server" class="btn btn-outline-info" Text="Insert Product Type" OnClick="btnInsertProductType_Click" />
-            &nbsp;&nbsp;&nbsp;
+            <br />  <br />
     <asp:Button ID="btnUpdateProductType" runat="server" class="btn btn-outline-info" Text="Update Product Type" OnClick="btnUpdateProductType_Click" />
+            &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnViewPaymentType" runat="server" class="btn btn-outline-info" Text="View Payment Type" OnClick="btnPaymentType_Click" />
+            &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnInsertPaymentType" runat="server" class="btn btn-outline-info" Text="Insert Payment Type" OnClick="btnInsertPaymentType_Click" />
+            &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnUpdatePaymentType" runat="server" class="btn btn-outline-info" Text="Update Payment Type" OnClick="btnUpdatePaymentType_Click" />
+            &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnViewTransactionReport" runat="server" class="btn btn-outline-info" Text="Transaction Report" OnClick="btnViewTransactionReport_Click" />
+            &nbsp;&nbsp;&nbsp;
+            
         </p>
 
         <p>

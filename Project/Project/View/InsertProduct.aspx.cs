@@ -65,6 +65,7 @@ namespace Project.View
                         InsertProductController.doInsert(pt.ProductTypeID, name, price, stock);
                         GridViewInsertProduct.DataSource = ViewProductController.getAllProduct();
                         GridViewInsertProduct.DataBind();
+                        Response.Redirect("InsertProduct.aspx");
                     }
                     else
                     {

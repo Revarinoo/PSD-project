@@ -19,16 +19,21 @@ namespace Project.View
                 User us = (User)Session["user"];
                 if (Session["user"] != null)
                 {
-                    if(us.RoleID == 2)
+                    lblPayment.Visible = false;
+                    btnCheckout.Visible = false;
+                    DropDownListPaymentType.Visible = false;
+                    if (us.RoleID == 2)
                     {
                         var data = ViewCartController.getCart(us.UserID);
                         GridViewCart.DataSource = data.ToList();
                         GridViewCart.DataBind();
                         if(data.Count != 0)
                         {
-                            GridViewCart.FooterRow.Cells[0].Text = "Grand Total";
-                            GridViewCart.FooterRow.Cells[5].Font.Bold = true;
-                            GridViewCart.FooterRow.Cells[5].Text = ViewCartController.getGrandTotal(us.UserID).ToString();
+                            viewCart(us.UserID);   
+                        }
+                        else
+                        {
+                            empty.Visible = true;
                         }
                     }
                     else
@@ -43,17 +48,51 @@ namespace Project.View
             }
         }
 
+        private void viewCart(int id)
+        {
+            lblPayment.Visible = true;
+            DropDownListPaymentType.Visible = true;
+            GridViewCart.FooterRow.Cells[0].Font.Bold = true;
+            GridViewCart.FooterRow.Cells[0].Text = "Grand Total";
+            GridViewCart.FooterRow.Cells[6].Font.Bold = true;
+            GridViewCart.FooterRow.Cells[6].Text = ViewCartController.getGrandTotal(id).ToString();
+            DropDownListPaymentType.DataSource = ViewCartController.getPaymentType().Select(pt => pt.Type).ToList();
+            DropDownListPaymentType.DataBind();
+            btnCheckout.Visible = true;
+        }
+
         protected void UpdateCart_Click(object send, EventArgs e)
         {
             int ProductID = Int32.Parse((send as LinkButton).CommandArgument);
             Response.Redirect("UpdateCart.aspx?id=" + ProductID);
         }
 
-        //protected void DeleteCart_Click(object send, EventArgs e)
-        //{
-        //    int UserID = Int32.Parse((send as LinkButton).CommandArgument);
-        //    int ProductID = Int32.Parse((send as LinkButton).CommandArgument);
-        //    Response.Redirect("DeleteCart.aspx?UserID=" + UserID + "ProductID=" + ProductID);
-        //}
+        protected void DeleteCart_Click(object sender, EventArgs e)
+        {
+            int ProductID = Int32.Parse((sender as LinkButton).CommandArgument);
+            User us = (User)Session["user"];
+            ViewCartController.deleteCart(us.UserID, ProductID);
+            Response.Redirect("ViewCart.aspx");
+        }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            User us = (User)Session["user"];
+            string paymentType = DropDownListPaymentType.Text.ToString();
+            int paymentID = TransactionController.searchByName(paymentType);
+            TransactionController.insertHT(us.UserID, paymentID);
+            int TransactionID = HeaderTransactionRepository.getTransactionID();
+            int productID = 0;
+            int qty = 0;
+            foreach (GridViewRow row in GridViewCart.Rows)
+            {
+                productID = Convert.ToInt32(row.Cells[2].Text);
+                qty = Convert.ToInt32(row.Cells[5].Text);
+                TransactionController.insertDT(TransactionID, productID, qty);
+            }
+            TransactionController.deleteAllCart(us.UserID);
+            Response.Redirect("ViewCart.aspx");
+            
+        }
     }
 }

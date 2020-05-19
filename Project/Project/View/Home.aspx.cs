@@ -33,7 +33,6 @@ namespace Project.View
                 LblMessage.Visible = true;
                 LblMessage.Text = "Welcome " + us.Name + "!";
             }
-            
             random();
             }
         }
@@ -48,6 +47,10 @@ namespace Project.View
             btnUpdateProductType.Visible = false;
             GridViewCart.Columns[0].Visible = false;
             LblMessage.Visible = false;
+            btnViewPaymentType.Visible = false;
+            btnInsertPaymentType.Visible = false;
+            btnUpdatePaymentType.Visible = false;
+            btnViewTransactionReport.Visible = false;
         }
 
         private void AdminButton()
@@ -58,14 +61,30 @@ namespace Project.View
             btnViewProductType.Visible = true;
             btnInsertProductType.Visible = true;
             btnUpdateProductType.Visible = true;
+            btnViewPaymentType.Visible = true;
+            btnInsertPaymentType.Visible = true;
+            btnUpdatePaymentType.Visible = true;
+            btnViewTransactionReport.Visible = true;
         }
 
         private void random()
         {
-            var pr = ViewProductController.generateRandom();
 
-            GridViewCart.DataSource = pr.ToList();
-            GridViewCart.DataBind();
+            int count = ViewProductController.countProduct();
+            if(count < 6)
+            {
+                var less = ViewProductController.getAllProduct();
+                GridViewCart.DataSource = less.ToList();
+                GridViewCart.DataBind();
+            }
+            else
+            {
+                var pr = ViewProductController.generateRandom();
+
+                GridViewCart.DataSource = pr.ToList();
+                GridViewCart.DataBind();
+            }
+            
         }
 
         protected void Cart_Click(object send, EventArgs e)
@@ -110,6 +129,24 @@ namespace Project.View
             Response.Redirect("ViewUser.aspx");
         }
 
+        protected void btnPaymentType_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewPaymentType.aspx");
+        }
 
+        protected void btnInsertPaymentType_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InsertPaymentType.aspx");
+        }
+
+        protected void btnUpdatePaymentType_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdatePaymentType.aspx");
+        }
+
+        protected void btnViewTransactionReport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewTransactionReport.aspx");
+        }
     }
 }

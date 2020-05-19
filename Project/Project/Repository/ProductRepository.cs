@@ -75,13 +75,34 @@ namespace Project.Repository
                         select new DetailedProduct()
                         {
                             ProductID = x.ProductID,
-                            ProductName = x.Name,
+                            Name = x.Name,
                             Stock = x.Stock,
                             ProductTypeName = y.Name,
                             Price = x.Price
                        });
             
             return view.ToList();
+        }
+
+        public static List<ProductInfo> productInfo(int productID)
+        {
+            var view = (from x in dbEntity.Products join y in dbEntity.ProductTypes
+                        on x.ProductTypeID equals y.ProductTypeID
+                        where x.ProductID == productID
+                        select new ProductInfo()
+                        {
+                            Name = x.Name,
+                            Price = x.Price,
+                            Stock = x.Stock,
+                            ProductType = y.Name
+                       });
+            
+            return view.ToList();
+        }
+
+        public static List<Product> currentStock(int productID)
+        {
+            return dbEntity.Products.Where(p => p.ProductID == productID).ToList();
         }
 
         public static void InsertProduct(int TypeID, string name, int price, int stock)
@@ -117,6 +138,11 @@ namespace Project.Repository
             Product p = (Product)dbEntity.Products.Where(a => a.ProductID == id).FirstOrDefault();
             dbEntity.Products.Remove(p);
             dbEntity.SaveChanges();
+        }
+        
+        public static int countProduct()
+        {
+            return dbEntity.Products.Count();
         }
     }
 }

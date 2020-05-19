@@ -1,4 +1,5 @@
-﻿using Project.Repository;
+﻿using Project.Model;
+using Project.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,16 @@ namespace Project.Handler
         {
             return CartRepository.getGrandTotal(id);
         }
+
+        public static void deleteCart(int userID, int productID)
+        {
+            CartRepository.deleteCart(userID, productID);
+        }
+
+        public static List<PaymentType> getAllPaymentType()
+        {
+            return PaymentTypeRepository.getAllPaymentType();
+        }
+        
     }
 }

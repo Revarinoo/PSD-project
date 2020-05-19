@@ -19,6 +19,7 @@ namespace Project.Controller
             int ran = 0;
             int flag;
             int j = 0;
+            
             do
             {
                 flag = 0;
@@ -55,6 +56,33 @@ namespace Project.Controller
         public static List<DetailedProduct> getAllProduct()
         {
             return ViewProductHandler.getProduct();
+        }
+
+        public static void deleteProduct(int id)
+        {
+            ViewProductHandler.deleteProduct(id);
+        }
+
+        public static int countProduct()
+        {
+            return HomeHandler.countProduct();
+        }
+
+        public static bool validateDelete(int id, out string errorMsg)
+        {
+            errorMsg = "";
+            var p = ViewProductHandler.searchProductByID(id);
+            var dt = ViewProductHandler.searchDetailTransactionByID(id);
+            if ((p != null) && (dt == null))
+            {
+                errorMsg = "Success!";
+                return true;
+            }
+            else
+            {
+                errorMsg = "Failed!";
+                return false;
+            }
         }
     }
 }

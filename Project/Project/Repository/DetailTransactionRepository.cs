@@ -1,4 +1,5 @@
-﻿using Project.Model;
+﻿using Project.Factory;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,13 @@ namespace Project.Repository
             return (from x in dbEntity.DetailTransactions
                     where x.ProductID == id
                     select x).FirstOrDefault();
+        }
+
+        public static void insertDetailTransaction(int transactionID, int productID, int quantity)
+        {
+            DetailTransaction dt = DetailTransactionFactory.addDetailTransaction(transactionID, productID, quantity);
+            dbEntity.DetailTransactions.Add(dt);
+            dbEntity.SaveChanges();
         }
     }
 }

@@ -18,14 +18,17 @@ namespace Project.View
             if (!IsPostBack)
             {
                 GridViewProduct.Columns[0].Visible = false;
+                GridViewProduct.Columns[1].Visible = false;
+                GridViewProduct.Columns[2].Visible = false;
+                GridViewProduct.Columns[3].Visible = false;
                 User us = (User)Session["user"];
                 if (Session["user"] != null)
                 {
                     if (us.RoleID == 1)
                     {
-                        buttonInsertProduct.Visible = true;
-                        buttonUpdateProduct.Visible = true;
-                        buttonDeleteProduct.Visible = true;
+                        GridViewProduct.Columns[1].Visible = true;
+                        GridViewProduct.Columns[2].Visible = true;
+                        GridViewProduct.Columns[3].Visible = true;
                     }
                     else if(us.RoleID == 2)
                     {
@@ -41,6 +44,35 @@ namespace Project.View
         {
             int id = Int32.Parse((send as LinkButton).CommandArgument);
             Response.Redirect("AddtoCart.aspx?id=" + id);
+        }
+
+        protected void InsertProduct_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InsertProduct.aspx");
+        }
+
+        protected void UpdateProduct_Click(object send, EventArgs e)
+        {
+            int ProductID = Int32.Parse((send as LinkButton).CommandArgument);
+            Response.Redirect("UpdateProducts.aspx?ProductID=" + ProductID);
+        }
+
+        protected void DeleteProduct_Click(object send, EventArgs e)
+        {
+            int ProductID = Int32.Parse((send as LinkButton).CommandArgument);
+            string errorMsg = "";
+            bool success = ViewProductController.validateDelete(ProductID, out errorMsg);
+            if (success)
+            {
+                ViewProductController.deleteProduct(ProductID);
+                Response.Redirect("ViewProduct.aspx");
+            }   
+            else
+            {
+                lblDelete.Visible = true;
+                lblDelete.Text = errorMsg;
+            }
+
         }
 
         protected void buttonInsertProduct_Click(object sender, EventArgs e)

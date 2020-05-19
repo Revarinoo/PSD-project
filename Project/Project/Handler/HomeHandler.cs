@@ -28,5 +28,10 @@ namespace Project.Handler
         {
             return ProductRepository.addRandomProduct(a, b, c, d, e);
         }
+
+        public static int countProduct()
+        {
+            return ProductRepository.countProduct();
+        }
     }
 }

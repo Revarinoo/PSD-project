@@ -21,7 +21,7 @@ namespace Project.View
             {
                 if (us.RoleID == 1)
                 {
-                    string updID = Request.QueryString["id"];
+                    string updID = Request.QueryString["ProductID"];
                     newID = int.Parse(updID);
                 }
                 else
