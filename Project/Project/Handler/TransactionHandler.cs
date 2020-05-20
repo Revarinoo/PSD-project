@@ -1,4 +1,5 @@
-﻿using Project.Repository;
+﻿using Project.Model;
+using Project.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace Project.Handler
             CartRepository.deleteAllCart(userID);
         }
 
-        public static void insertHT(int userID, int paymentTypeID)
+        public static int insertHT(int userID, int paymentTypeID)
         {
-            HeaderTransactionRepository.insertHeaderTransaction(userID, paymentTypeID);
+            int transactionID = HeaderTransactionRepository.insertHeaderTransaction(userID, paymentTypeID);
+            return transactionID;
         }
 
         public static void insertDT(int transactionID, int productID, int quantity)
@@ -32,5 +34,11 @@ namespace Project.Handler
         {
             return CartRepository.count();
         }
+
+        public static List<Cart> getAllUserCart(int userID)
+        {
+            return CartRepository.getAllUserCart(userID);
+        }
+        
     }
 }

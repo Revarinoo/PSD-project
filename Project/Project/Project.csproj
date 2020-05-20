@@ -134,6 +134,7 @@
     <Content Include="View\AddtoCart.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\InsertProduct.aspx" />
+    <Content Include="View\InsertProductType.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="View\Site1.Master" />
@@ -151,35 +152,45 @@
     <Content Include="View\UpdateCart.aspx" />
     <Content Include="View\UpdateProduct.aspx" />
     <Content Include="View\UpdateProducts.aspx" />
+    <Content Include="View\UpdateProductType.aspx" />
+    <Content Include="View\UpdateProductTypes.aspx" />
     <Content Include="View\ViewCart.aspx" />
     <Content Include="View\ViewProduct.aspx" />
+    <Content Include="View\ViewProductType.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AddtoCartController.cs" />
     <Compile Include="Controller\AuthController.cs" />
     <Compile Include="Controller\InsertProductController.cs" />
+    <Compile Include="Controller\InsertProductTypeController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\UpdateCartController.cs" />
     <Compile Include="Controller\UpdateProductController.cs" />
+    <Compile Include="Controller\UpdateProductTypeController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\ViewCartController.cs" />
     <Compile Include="Controller\ViewProductController.cs" />
+    <Compile Include="Controller\ViewProductTypeController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailTransactionFactory.cs" />
     <Compile Include="Factory\HeaderTransactionFactory.cs" />
     <Compile Include="Factory\ProductFactory.cs" />
+    <Compile Include="Factory\ProductTypeFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Handler\AddtoCartHandler.cs" />
     <Compile Include="Handler\HomeHandler.cs" />
     <Compile Include="Handler\InsertProductHandler.cs" />
+    <Compile Include="Handler\InsertProductTypeHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\UpdateCartHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
+    <Compile Include="Handler\UpdateProductTypeHandler.cs" />
     <Compile Include="Handler\ViewCartHandler.cs" />
     <Compile Include="Handler\ViewProductHandler.cs" />
+    <Compile Include="Handler\ViewProductTypeHandler.cs" />
     <Compile Include="Model\Cart.cs">
       <DependentUpon>Tokobedia.tt</DependentUpon>
     </Compile>
@@ -251,6 +262,13 @@
     <Compile Include="View\InsertProduct.aspx.designer.cs">
       <DependentUpon>InsertProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\InsertProductType.aspx.cs">
+      <DependentUpon>InsertProductType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InsertProductType.aspx.designer.cs">
+      <DependentUpon>InsertProductType.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -300,6 +318,20 @@
     <Compile Include="View\UpdateProducts.aspx.designer.cs">
       <DependentUpon>UpdateProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateProductType.aspx.cs">
+      <DependentUpon>UpdateProductType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProductType.aspx.designer.cs">
+      <DependentUpon>UpdateProductType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProductTypes.aspx.cs">
+      <DependentUpon>UpdateProductTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProductTypes.aspx.designer.cs">
+      <DependentUpon>UpdateProductTypes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,6 +345,13 @@
     </Compile>
     <Compile Include="View\ViewProduct.aspx.designer.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewProductType.aspx.cs">
+      <DependentUpon>ViewProductType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewProductType.aspx.designer.cs">
+      <DependentUpon>ViewProductType.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

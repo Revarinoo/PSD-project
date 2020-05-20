@@ -27,6 +27,13 @@ namespace Project.Repository
                     select x).FirstOrDefault();
         }
 
+        public static Product searchPTByID(int ptID)
+        {
+            return (from x in dbEntity.Products
+                    where x.ProductTypeID == ptID
+                    select x).FirstOrDefault();
+        }
+
         public static bool checkProduct(int id)
         {
             var P = (from x in dbEntity.Products
@@ -144,5 +151,7 @@ namespace Project.Repository
         {
             return dbEntity.Products.Count();
         }
+
+        
     }
 }

@@ -11,11 +11,12 @@ namespace Project.Repository
     {
         static TokobediaEntities dbEntity = new TokobediaEntities();
 
-        public static void insertHeaderTransaction(int userID, int paymentTypeID)
+        public static int insertHeaderTransaction(int userID, int paymentTypeID)
         {
             HeaderTransaction ht = HeaderTransactionFactory.addHeaderTransaction(userID, paymentTypeID);
             dbEntity.HeaderTransactions.Add(ht);
             dbEntity.SaveChanges();
+            return ht.TransactionID;
         }
 
         public static int getTransactionID()

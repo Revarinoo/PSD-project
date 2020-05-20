@@ -80,17 +80,8 @@ namespace Project.View
             User us = (User)Session["user"];
             string paymentType = DropDownListPaymentType.Text.ToString();
             int paymentID = TransactionController.searchByName(paymentType);
-            TransactionController.insertHT(us.UserID, paymentID);
-            int TransactionID = HeaderTransactionRepository.getTransactionID();
-            int productID = 0;
-            int qty = 0;
-            foreach (GridViewRow row in GridViewCart.Rows)
-            {
-                productID = Convert.ToInt32(row.Cells[2].Text);
-                qty = Convert.ToInt32(row.Cells[5].Text);
-                TransactionController.insertDT(TransactionID, productID, qty);
-            }
-            TransactionController.deleteAllCart(us.UserID);
+            TransactionController.checkOut(us.UserID, paymentID);
+            
             Response.Redirect("ViewCart.aspx");
             
         }

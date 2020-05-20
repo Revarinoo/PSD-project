@@ -1,4 +1,5 @@
 ﻿using Project.Handler;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,17 @@ namespace Project.Controller
         public static int countCart()
         {
             return TransactionHandler.countCart();
+        }
+
+        public static void checkOut(int userID, int paymentTypeID)
+        {
+            List<Cart> cartList = TransactionHandler.getAllUserCart(userID);
+            int transactionID = TransactionHandler.insertHT(userID, paymentTypeID);
+            foreach(Cart cart in cartList)
+            {
+                insertDT(transactionID, cart.ProductID, cart.Quantity);
+            }
+            deleteAllCart(userID);
         }
     }
 }

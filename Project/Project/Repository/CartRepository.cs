@@ -11,6 +11,14 @@ namespace Project.Repository
     {
         static TokobediaEntities dbEntity = new TokobediaEntities();
 
+        public static List<Cart> getAllUserCart(int userID)
+        {
+            var cart = (from x in dbEntity.Carts
+                        where x.UserID == userID
+                        select x);
+            return cart.ToList();
+        }
+
         public static List<DetailedCart> getCart(int userID)
         {
             var cart = (from x in dbEntity.Products join y in dbEntity.Carts
