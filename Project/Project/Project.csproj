@@ -133,6 +133,7 @@
     </Content>
     <Content Include="View\AddtoCart.aspx" />
     <Content Include="View\Home.aspx" />
+    <Content Include="View\InsertPaymentType.aspx" />
     <Content Include="View\InsertProduct.aspx" />
     <Content Include="View\InsertProductType.aspx" />
     <Content Include="View\Login.aspx" />
@@ -150,11 +151,14 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="View\UpdateCart.aspx" />
+    <Content Include="View\UpdatePaymentType.aspx" />
+    <Content Include="View\UpdatePaymentTypes.aspx" />
     <Content Include="View\UpdateProduct.aspx" />
     <Content Include="View\UpdateProducts.aspx" />
     <Content Include="View\UpdateProductType.aspx" />
     <Content Include="View\UpdateProductTypes.aspx" />
     <Content Include="View\ViewCart.aspx" />
+    <Content Include="View\ViewPaymentType.aspx" />
     <Content Include="View\ViewProduct.aspx" />
     <Content Include="View\ViewProductType.aspx" />
     <Content Include="Web.config" />
@@ -162,33 +166,42 @@
   <ItemGroup>
     <Compile Include="Controller\AddtoCartController.cs" />
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\DeletePaymentTypeController.cs" />
+    <Compile Include="Controller\InsertPaymentTypeController.cs" />
     <Compile Include="Controller\InsertProductController.cs" />
     <Compile Include="Controller\InsertProductTypeController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\UpdateCartController.cs" />
+    <Compile Include="Controller\UpdatePaymentTypeController.cs" />
     <Compile Include="Controller\UpdateProductController.cs" />
     <Compile Include="Controller\UpdateProductTypeController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\ViewCartController.cs" />
+    <Compile Include="Controller\ViewPaymentTypeController.cs" />
     <Compile Include="Controller\ViewProductController.cs" />
     <Compile Include="Controller\ViewProductTypeController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailTransactionFactory.cs" />
     <Compile Include="Factory\HeaderTransactionFactory.cs" />
+    <Compile Include="Factory\PaymentTypeFactory.cs" />
     <Compile Include="Factory\ProductFactory.cs" />
     <Compile Include="Factory\ProductTypeFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Handler\AddtoCartHandler.cs" />
+    <Compile Include="Handler\DeletePaymentTypeHandler.cs" />
     <Compile Include="Handler\HomeHandler.cs" />
+    <Compile Include="Handler\InsertPaymentTypeHandler.cs" />
     <Compile Include="Handler\InsertProductHandler.cs" />
     <Compile Include="Handler\InsertProductTypeHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\UpdateCartHandler.cs" />
+    <Compile Include="Handler\UpdatePaymentTypeHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
     <Compile Include="Handler\UpdateProductTypeHandler.cs" />
     <Compile Include="Handler\ViewCartHandler.cs" />
+    <Compile Include="Handler\ViewPaymentTypeHandler.cs" />
     <Compile Include="Handler\ViewProductHandler.cs" />
     <Compile Include="Handler\ViewProductTypeHandler.cs" />
     <Compile Include="Model\Cart.cs">
@@ -255,6 +268,13 @@
     <Compile Include="View\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\InsertPaymentType.aspx.cs">
+      <DependentUpon>InsertPaymentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InsertPaymentType.aspx.designer.cs">
+      <DependentUpon>InsertPaymentType.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\InsertProduct.aspx.cs">
       <DependentUpon>InsertProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +324,20 @@
     <Compile Include="View\UpdateCart.aspx.designer.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdatePaymentType.aspx.cs">
+      <DependentUpon>UpdatePaymentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePaymentType.aspx.designer.cs">
+      <DependentUpon>UpdatePaymentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdatePaymentTypes.aspx.cs">
+      <DependentUpon>UpdatePaymentTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePaymentTypes.aspx.designer.cs">
+      <DependentUpon>UpdatePaymentTypes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\UpdateProduct.aspx.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,6 +372,13 @@
     </Compile>
     <Compile Include="View\ViewCart.aspx.designer.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewPaymentType.aspx.cs">
+      <DependentUpon>ViewPaymentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewPaymentType.aspx.designer.cs">
+      <DependentUpon>ViewPaymentType.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>

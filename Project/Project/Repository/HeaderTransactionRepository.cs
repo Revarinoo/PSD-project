@@ -24,6 +24,11 @@ namespace Project.Repository
             return dbEntity.HeaderTransactions.Max(ht => ht.TransactionID);
         }
 
-        
+        public static HeaderTransaction searchByPaymentID(int paymentID)
+        {
+            return (from x in dbEntity.HeaderTransactions
+                    where x.PaymentTypeID == paymentID
+                    select x).FirstOrDefault();
+        }
     }
 }
