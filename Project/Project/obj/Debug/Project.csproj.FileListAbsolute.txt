@@ -35,3 +35,6 @@ C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.dll
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.SqlServer.dll
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.xml
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\EntityFramework.SqlServer.xml
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\obj\Debug\Project.dll
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\obj\Debug\Project.pdb
