@@ -32,8 +32,8 @@
             </tr>
             <tr>
                 <td class="auto-style1 fontt font-weight-bold" colspan="3">
-                    <asp:Button ID="BacktoHomeBtn" runat="server" Text="Back to Home" />
-                &nbsp;<asp:Button ID="UpdateProfileBtn" runat="server" Text="Update Profile" />
+                <asp:Button ID="UpdateProfileBtn" runat="server" class="btn btn-primary" Text="Update Profile" />
+                &nbsp;<asp:Button ID="BacktoHomeBtn" runat="server" class="btn btn-secondary" Text="Back to Home" />
                 </td>
                 <td colspan="3">&nbsp;</td>
                 <td>&nbsp;</td>

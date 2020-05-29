@@ -49,15 +49,6 @@ namespace Project.View {
         protected global::System.Web.UI.WebControls.Label UserGenderLabel;
         
         /// <summary>
-        /// BacktoHomeBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BacktoHomeBtn;
-        
-        /// <summary>
         /// UpdateProfileBtn control.
         /// </summary>
         /// <remarks>
@@ -65,5 +56,14 @@ namespace Project.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UpdateProfileBtn;
+        
+        /// <summary>
+        /// BacktoHomeBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BacktoHomeBtn;
     }
 }

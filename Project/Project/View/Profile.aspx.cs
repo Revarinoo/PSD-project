@@ -18,5 +18,10 @@ namespace Project.View
         {
             Response.Redirect("Home.aspx");
         }
+
+        protected void UpdateProfileBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
