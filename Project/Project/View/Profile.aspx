@@ -7,21 +7,21 @@
         </h2>
         <table style="width: 100%;">
             <tr>
-                <td class="auto-style2 fontt font-weight-bold">Email</td>
+                <td class="auto-style1 fontt font-weight-bold">Email</td>
                 <td class="auto-style3 fontt font-weight-bold">:</td>
                 <td>
                     <asp:Label ID="UserEmailLabel" runat="server" Text="User Email"></asp:Label>
                </td>
             </tr>
             <tr>
-                <td class="auto-style2 fontt font-weight-bold">Name</td>
+                <td class="auto-style1 fontt font-weight-bold">Name</td>
                 <td class="auto-style3 fontt font-weight-bold">:</td>
                 <td>
                     <asp:Label ID="UserNameLabel" runat="server" Text="User Name"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2 fontt font-weight-bold">Gender</td>
+                <td class="auto-style1 fontt font-weight-bold">Gender</td>
                 <td class="auto-style3 fontt font-weight-bold">:</td>
                 <td>
                     <asp:Label ID="UserGenderLabel" runat="server" Text="User Gender"></asp:Label>
