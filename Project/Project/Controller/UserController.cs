@@ -38,5 +38,10 @@ namespace Project.Controller
         {
             RegisterHandler.addUser(name, email, password, gender);
         }
+
+        public static List<User> getAllUser()
+        {
+            return UserHandler.getAllUser();
+        }
     }
 }
