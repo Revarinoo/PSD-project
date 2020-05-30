@@ -11,7 +11,7 @@
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:LinkButton OnClick="Change_StatusBtn" ID="UserRedirect" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("UserID")%>' runat="server" >Switch Status</asp:LinkButton>
+                        <asp:LinkButton  ID="UserRedirect" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("UserID")%>' runat="server" >Switch Status</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
