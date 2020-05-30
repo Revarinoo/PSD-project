@@ -24,7 +24,7 @@
             <td class="auto-style1 fontt font-weight-bold">Gender</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:RadioButtonList ID="RadioButtonGender" class="fontt font-weight-bold" runat="server">
+                <asp:RadioButtonList ID="RadioButtonGender" class="fontt font-weight-bold" runat="server" OnSelectedIndexChanged="RadioButtonGender_SelectedIndexChanged">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:RadioButtonList>
@@ -33,8 +33,9 @@
         </tr>
       
     </table>
+    <asp:Label ID="labelError" runat="server" ForeColor="Red" Text="ErrorMsg"></asp:Label>
     <br />
-    <asp:Button ID="updateBtn" runat="server" class="btn btn-primary " Text="Update"/>
+    <asp:Button ID="updateBtn" runat="server" class="btn btn-primary " Text="Update" OnClick="updateBtn_Click"/>
     &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="backtohomeBtn" runat="server" class="btn btn-secondary " Text="Back to Home"/>
+    <asp:Button ID="backtohomeBtn" runat="server" class="btn btn-secondary " Text="Back to Home" OnClick="backtohomeBtn_Click"/>
 </asp:Content>

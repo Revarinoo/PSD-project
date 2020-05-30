@@ -44,6 +44,13 @@ namespace Project.Repository
                     select x).FirstOrDefault();
         }
 
-        
+        public static void updateProfile(int userID, string name, string email, string gender)
+        {
+            User usr = (User)dbEntity.Users.Where(u => u.UserID == userID).FirstOrDefault();
+            usr.Name = name;
+            usr.Email = email;
+            usr.Gender = gender;
+            dbEntity.SaveChanges();
+        }
     }
 }
