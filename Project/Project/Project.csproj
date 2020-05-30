@@ -132,11 +132,13 @@
       <DependentUpon>Tokobedia.edmx</DependentUpon>
     </Content>
     <Content Include="View\AddtoCart.aspx" />
+    <Content Include="View\ChangePassword.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\InsertPaymentType.aspx" />
     <Content Include="View\InsertProduct.aspx" />
     <Content Include="View\InsertProductType.aspx" />
     <Content Include="View\Login.aspx" />
+    <Content Include="View\Profile.aspx" />
     <Content Include="View\Register.aspx" />
     <Content Include="View\Site1.Master" />
     <Content Include="View\Site2.Master" />
@@ -157,6 +159,7 @@
     <Content Include="View\UpdateProducts.aspx" />
     <Content Include="View\UpdateProductType.aspx" />
     <Content Include="View\UpdateProductTypes.aspx" />
+    <Content Include="View\UpdateProfile.aspx" />
     <Content Include="View\ViewCart.aspx" />
     <Content Include="View\ViewPaymentType.aspx" />
     <Content Include="View\ViewProduct.aspx" />
@@ -201,6 +204,7 @@
     <Compile Include="Handler\UpdatePaymentTypeHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
     <Compile Include="Handler\UpdateProductTypeHandler.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Handler\ViewCartHandler.cs" />
     <Compile Include="Handler\ViewPaymentTypeHandler.cs" />
     <Compile Include="Handler\ViewProductHandler.cs" />
@@ -262,6 +266,13 @@
     <Compile Include="View\AddtoCart.aspx.designer.cs">
       <DependentUpon>AddtoCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,6 +307,13 @@
     </Compile>
     <Compile Include="View\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -366,6 +384,13 @@
     </Compile>
     <Compile Include="View\UpdateProductTypes.aspx.designer.cs">
       <DependentUpon>UpdateProductTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\ViewCart.aspx.cs">
       <DependentUpon>ViewCart.aspx</DependentUpon>

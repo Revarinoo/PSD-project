@@ -10,6 +10,12 @@ namespace Project.Repository
     public class UserRepository
     {
         static TokobediaEntities dbEntity = new TokobediaEntities();
+
+        public static List<User> getAllUser()
+        {
+            return dbEntity.Users.ToList();
+        }
+
         public static void RegisterUser(String name, String email, String pass, String gender)
         {
             User usr = UserFactory.CreateUser(name,email,pass,gender);
