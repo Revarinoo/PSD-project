@@ -152,6 +152,7 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="View\TransactionHistory.aspx" />
     <Content Include="View\UpdateCart.aspx" />
     <Content Include="View\UpdatePaymentType.aspx" />
     <Content Include="View\UpdatePaymentTypes.aspx" />
@@ -176,6 +177,7 @@
     <Compile Include="Controller\InsertProductController.cs" />
     <Compile Include="Controller\InsertProductTypeController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
+    <Compile Include="Controller\TransactionHistoryController.cs" />
     <Compile Include="Controller\UpdateCartController.cs" />
     <Compile Include="Controller\UpdatePaymentTypeController.cs" />
     <Compile Include="Controller\UpdateProductController.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Handler\TransactionHandler.cs" />
+    <Compile Include="Handler\TransactionHistoryHandler.cs" />
     <Compile Include="Handler\UpdateCartHandler.cs" />
     <Compile Include="Handler\UpdatePaymentTypeHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
@@ -341,6 +344,13 @@
     </Compile>
     <Compile Include="View\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransactionHistory.aspx.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\TransactionHistory.aspx.designer.cs">
+      <DependentUpon>TransactionHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\UpdateCart.aspx.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>
