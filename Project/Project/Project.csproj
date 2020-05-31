@@ -170,6 +170,7 @@
   <ItemGroup>
     <Compile Include="Controller\AddtoCartController.cs" />
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\ChangePasswordController.cs" />
     <Compile Include="Controller\DeletePaymentTypeController.cs" />
     <Compile Include="Controller\InsertPaymentTypeController.cs" />
     <Compile Include="Controller\InsertProductController.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Factory\ProductTypeFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Handler\AddtoCartHandler.cs" />
+    <Compile Include="Handler\ChangePasswordHandler.cs" />
     <Compile Include="Handler\DeletePaymentTypeHandler.cs" />
     <Compile Include="Handler\HomeHandler.cs" />
     <Compile Include="Handler\InsertPaymentTypeHandler.cs" />

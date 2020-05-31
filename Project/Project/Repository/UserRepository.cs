@@ -54,7 +54,8 @@ namespace Project.Repository
         public static User checkOldPassword(int id, string oldpass)
         {
             return (from x in dbEntity.Users
-                    where x.UserID == id && x.Password == oldpass).FirstOrDefault();
+                    where x.UserID == id && x.Password == oldpass
+                    select x).FirstOrDefault();
         }
 
         public static User doLogin(string email, string password)
