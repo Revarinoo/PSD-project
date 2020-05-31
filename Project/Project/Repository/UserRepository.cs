@@ -51,11 +51,24 @@ namespace Project.Repository
                     select x).FirstOrDefault();
         }
 
+        public static User checkOldPassword(int id, string oldpass)
+        {
+            return (from x in dbEntity.Users
+                    where x.UserID == id && x.Password == oldpass).FirstOrDefault();
+        }
+
         public static User doLogin(string email, string password)
         {
             return (from x in dbEntity.Users
                     where x.Email == email && x.Password == password
                     select x).FirstOrDefault();
+        }
+
+        public static void changePassword(int userID, string oldpass, string newpass)
+        {
+            User usr = (User)dbEntity.Users.Where(u => u.UserID == userID && u.Password == oldpass).FirstOrDefault();
+            usr.Password = newpass;
+            dbEntity.SaveChanges();
         }
 
         public static void updateProfile(int userID, string name, string email, string gender)

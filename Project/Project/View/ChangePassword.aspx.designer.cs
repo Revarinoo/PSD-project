@@ -31,13 +31,13 @@ namespace Project.View {
         protected global::System.Web.UI.WebControls.TextBox OldPassTextBox;
         
         /// <summary>
-        /// BewPassTextBox control.
+        /// NewPassTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BewPassTextBox;
+        protected global::System.Web.UI.WebControls.TextBox NewPassTextBox;
         
         /// <summary>
         /// ConfirmPassTextBox control.
@@ -47,6 +47,15 @@ namespace Project.View {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmPassTextBox;
+        
+        /// <summary>
+        /// labelError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelError;
         
         /// <summary>
         /// changepassBtn control.

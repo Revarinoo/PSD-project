@@ -16,7 +16,7 @@
             <td class="auto-style1 fontt font-weight-bold">New Password</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:TextBox ID="BewPassTextBox" runat="server" TabIndex="2" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="NewPassTextBox" runat="server" TabIndex="2" Width="300px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -29,8 +29,9 @@
         </tr>
       
     </table>
+    <asp:Label ID="labelError" runat="server" ForeColor="Red" Text="Label"></asp:Label>
     <br />
-    <asp:Button ID="changepassBtn" runat="server" class="btn btn-primary " Text="Change Password"/>
+    <asp:Button ID="changepassBtn" runat="server" class="btn btn-primary " Text="Change Password" OnClick="changepassBtn_Click"/>
     &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="backtohomeBtn" runat="server" class="btn btn-secondary " Text="Back to Home"/>
+    <asp:Button ID="backtohomeBtn" runat="server" class="btn btn-secondary " Text="Back to Home" OnClick="backtohomeBtn_Click"/>
 </asp:Content>
