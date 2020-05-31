@@ -16,18 +16,28 @@ namespace Project.Repository
             return dbEntity.Users.ToList();
         }
 
-        public static List<User> getUser()
+        public static List<DetailedUser> getUser()
         {
-            var view = (from x in dbEntity.Users
-                        select new User()
+            var user = (from x in dbEntity.Users join y in dbEntity.Roles
+                        on x.RoleID equals y.RoleID
+                        select new DetailedUser()
                         {
                             UserID = x.UserID,
                             Name = x.Name,
-                            RoleID = x.RoleID,
+                            Role = y.RoleName,
                             Status = x.Status
                         });
+            return user.ToList();
+            //var view = (from x in dbEntity.Users
+            //            select new User()
+            //            {
+            //                UserID = x.UserID,
+            //                Name = x.Name,
+            //                RoleID = x.RoleID,
+            //                Status = x.Status
+            //            });
 
-            return view.ToList();
+            //return view.ToList();
         }
 
         public static void RegisterUser(String name, String email, String pass, String gender)
