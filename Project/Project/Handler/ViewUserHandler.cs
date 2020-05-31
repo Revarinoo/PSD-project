@@ -9,7 +9,7 @@ namespace Project.Handler
 {
     public class ViewUserHandler
     {
-        public static List<User> getUser()
+        public static List<DetailedUser> getUser()
         {
             return UserRepository.getUser();
         }

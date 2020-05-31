@@ -19,7 +19,7 @@
     </div>
     <br />
 &nbsp;&nbsp;
-    <asp:Button ID="BacktoHomeBtn" runat="server" class="btn btn-dark" Text="Back To Home"/>
+    <asp:Button OnClick="BacktoHomeBtn_Click" ID="BacktoHomeBtn" runat="server" class="btn btn-dark" Text="Back To Home"/>
     <br />
 &nbsp;&nbsp; 
     </asp:Content>

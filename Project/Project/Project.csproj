@@ -261,6 +261,7 @@
     <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\DetailedCart.cs" />
     <Compile Include="Repository\DetailedProduct.cs" />
+    <Compile Include="Repository\DetailedUser.cs" />
     <Compile Include="Repository\DetailTransactionRepository.cs" />
     <Compile Include="Repository\HeaderTransactionRepository.cs" />
     <Compile Include="Repository\PaymentTypeRepository.cs" />
