@@ -179,11 +179,13 @@
     <Compile Include="Controller\UpdatePaymentTypeController.cs" />
     <Compile Include="Controller\UpdateProductController.cs" />
     <Compile Include="Controller\UpdateProductTypeController.cs" />
+    <Compile Include="Controller\UpdateProfileController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Controller\ViewCartController.cs" />
     <Compile Include="Controller\ViewPaymentTypeController.cs" />
     <Compile Include="Controller\ViewProductController.cs" />
     <Compile Include="Controller\ViewProductTypeController.cs" />
+    <Compile Include="Controller\ViewUserController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\DetailTransactionFactory.cs" />
     <Compile Include="Factory\HeaderTransactionFactory.cs" />
@@ -204,11 +206,13 @@
     <Compile Include="Handler\UpdatePaymentTypeHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
     <Compile Include="Handler\UpdateProductTypeHandler.cs" />
+    <Compile Include="Handler\UpdateProfileHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Handler\ViewCartHandler.cs" />
     <Compile Include="Handler\ViewPaymentTypeHandler.cs" />
     <Compile Include="Handler\ViewProductHandler.cs" />
     <Compile Include="Handler\ViewProductTypeHandler.cs" />
+    <Compile Include="Handler\ViewUserHandler.cs" />
     <Compile Include="Model\Cart.cs">
       <DependentUpon>Tokobedia.tt</DependentUpon>
     </Compile>

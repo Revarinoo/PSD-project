@@ -21,8 +21,7 @@ namespace Project.View
                 {
                     if(us.RoleID == 1)
                     {
-                        var item =
-                        GridViewUser.DataSource = UserController.getAllUser();
+                        GridViewUser.DataSource = ViewUserController.getUser();
                         GridViewUser.DataBind();
                     }else
                     {
