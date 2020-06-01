@@ -1,5 +1,6 @@
 ﻿using Project.Handler;
 using Project.Model;
+using Project.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace Project.Controller
 {
     public class TransactionHistoryController
     {
-        public static List<HeaderTransaction> getTransactionHistory(int userID)
+        public static List<DetailedTransactionHistories> getTransactionHistory(int userID)
         {
-            return TransactionHistoryHandler.
+            return TransactionHistoryHandler.getTransactionHistory(int userID);
         }
     }
 }

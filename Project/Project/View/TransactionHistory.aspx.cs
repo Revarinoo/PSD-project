@@ -1,4 +1,5 @@
-﻿using Project.Model;
+﻿using Project.Controller;
+using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,8 @@ namespace Project.View
                         // DetailTransaction : TransactionID, ProductID
                         // Products : ProductID, [ProductName]
                         // Cart: UserID, ProductID, [Quantity]
-                        //GridTransactionHistory.DataSource  
+                        int userID = us.UserID;
+                        GridTransactionHistory.DataSource = TransactionHistoryController.getTransactionHistory(userID);
                     }
                 }
             }

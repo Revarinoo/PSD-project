@@ -43,6 +43,7 @@ namespace Project.View
         {
             int id = Int32.Parse((send as LinkButton).CommandArgument);
             ChangeStatusController.ChangeStatus(id);
+            Response.Redirect("ViewUser.aspx");
         }
     }
 }
