@@ -12,7 +12,12 @@ namespace Project.Controller
     {
         public static List<DetailedTransactionHistories> getTransactionHistory(int userID)
         {
-            return TransactionHistoryHandler.getTransactionHistory(int userID);
+            return TransactionHistoryHandler.getTransactionHistory(userID);
+        }
+
+        public static List<DetailedTransactionHistories> getAllTransactionHistory()
+        {
+            return TransactionHistoryHandler.getAllTransactionHistory();
         }
     }
 }

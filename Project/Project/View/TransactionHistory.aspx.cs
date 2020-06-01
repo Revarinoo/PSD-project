@@ -21,17 +21,13 @@ namespace Project.View
                     if(us.RoleID == 1)
                     {
                         // admin do something
+                        GridTransactionHistory.DataSource = TransactionHistoryController.getAllTransactionHistory();
                     }
                     else
                     {
-                        // user do something
-                        // HeaderTransaction : TransactionID, [Transaction Date], PaymentTypeID
-                        // PaymentTypes : PaymentTypeID, [Type]
-                        // DetailTransaction : TransactionID, ProductID
-                        // Products : ProductID, [ProductName]
-                        // Cart: UserID, ProductID, [Quantity]
                         int userID = us.UserID;
                         GridTransactionHistory.DataSource = TransactionHistoryController.getTransactionHistory(userID);
+                        GridTransactionHistory.DataBind();
                     }
                 }
             }
