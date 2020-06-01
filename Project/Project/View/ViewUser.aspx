@@ -7,11 +7,11 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Label ID="LabelHeader" runat="server" Font-Bold="True" Font-Names="Franklin Gothic Heavy" Font-Size="X-Large" Font-Strikeout="False" Font-Underline="True" Text="List Users"></asp:Label>
         <br />
         &nbsp;
-        <asp:GridView ID="GridViewUser" class="table table-dark" runat="server">
+        <asp:GridView ID="GridViewUser" class="table table-dark" runat="server" OnSelectedIndexChanged="GridViewUser_SelectedIndexChanged">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <asp:LinkButton  ID="UserRedirect" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("UserID")%>' runat="server" >Switch Status</asp:LinkButton>
+                        <asp:LinkButton OnClick="ChangeStatusButton_Click" ID="ChangeStatusButton" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("UserID")%>' runat="server" >Switch Status</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

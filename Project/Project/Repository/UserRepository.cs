@@ -82,6 +82,21 @@ namespace Project.Repository
             dbEntity.SaveChanges();
         }
 
+        public static void changeStatus(int id)
+        {
+            User usr = (User)dbEntity.Users.Where(u => u.UserID == id).FirstOrDefault();
+            if(usr.Status == "active")
+            {
+                usr.Status = "block";
+                dbEntity.SaveChanges();
+            }
+            else if(usr.Status == "block")
+            {
+                usr.Status = "active";
+                dbEntity.SaveChanges();
+            }
+        }
+
         public static void updateProfile(int userID, string name, string email, string gender)
         {
             User usr = (User)dbEntity.Users.Where(u => u.UserID == userID).FirstOrDefault();

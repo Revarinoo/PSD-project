@@ -38,5 +38,11 @@ namespace Project.View
         {
             Response.Redirect("Home.aspx");
         }
+
+        protected void ChangeStatusButton_Click(object send, EventArgs e)
+        {
+            int id = Int32.Parse((send as LinkButton).CommandArgument);
+            ChangeStatusController.ChangeStatus(id);
+        }
     }
 }
