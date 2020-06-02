@@ -40,5 +40,9 @@ namespace Project.Handler
             return CartRepository.getAllUserCart(userID);
         }
         
+        public static List<HeaderTransaction> getAllHeaderTransaction()
+        {
+            return HeaderTransactionRepository.getAllHeaderTransaction();
+        }
     }
 }

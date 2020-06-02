@@ -30,5 +30,10 @@ namespace Project.Repository
                     where x.PaymentTypeID == paymentID
                     select x).FirstOrDefault();
         }
+
+        public static List<HeaderTransaction> getAllHeaderTransaction()
+        {
+            return dbEntity.HeaderTransactions.ToList();
+        }
     }
 }

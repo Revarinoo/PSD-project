@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project {
+namespace Project.View {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Project {
         
         public override string FullResourceName {
             get {
-                return "Project.TransactionReport.rpt";
+                return "Project.View.TransactionReport.rpt";
             }
             set {
                 // Do nothing

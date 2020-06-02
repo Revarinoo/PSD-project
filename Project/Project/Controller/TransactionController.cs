@@ -1,5 +1,6 @@
 ﻿using Project.Handler;
 using Project.Model;
+using Project.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,33 @@ namespace Project.Controller
                 insertDT(transactionID, cart.ProductID, cart.Quantity);
             }
             deleteAllCart(userID);
+        }
+
+        public static TokobediaDataSet getTransactionDataSet()
+        {
+            TokobediaDataSet dataset = new TokobediaDataSet();
+            var headerTransaction = dataset.HeaderTransactions;
+            var detailTransaction = dataset.DetailTransaction;
+
+            List<HeaderTransaction> header = TransactionHandler.getAllHeaderTransaction();
+
+            foreach(HeaderTransaction h in header)
+            {
+                var row = headerTransaction.NewRow();
+                row["Date"] = h.Date;
+                row["TransactionID"] = h.TransactionID;
+                row["UserID"] = h.UserID;
+                headerTransaction.Rows.Add(row);
+
+                List<DetailTransaction> details = TransactionHandler.getDetailTransaction(h.TransactionID);
+
+                foreach(DetailTransaction d in details)
+                {
+                    var rowDetail = detailTransaction.NewRow();
+                    rowDetail["Id"] = d.Id;
+                    rowDetail
+                }
+            }
         }
     }
 }
