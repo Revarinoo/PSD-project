@@ -13,23 +13,14 @@ namespace Project.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                User us = (User)Session["user"];
-                if(us.RoleID == 1)
-                {
-            TransactionReport report = new TransactionReport();
+            CrystalReport1 report = new CrystalReport1();
+            LoadReport(report);
             TransactionReportViewer.ReportSource = report;
-                }else
-                {
-                    Response.Redirect("Home.aspx");
-                }
-            }
         }
 
-        private void loadReport (TransactionReport report)
+        private void LoadReport(CrystalReport1 report)
         {
-            TokobediaDataSet dataset = TransactionReportController.getTransactionReportDataSet();
+            DataSet1 dataset = TransactionReportController.getTransactionReportDataSet();
             report.SetDataSource(dataset);
         }
     }
