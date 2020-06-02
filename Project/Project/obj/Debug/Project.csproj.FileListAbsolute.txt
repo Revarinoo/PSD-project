@@ -72,3 +72,20 @@ D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-pr
 D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\bin\Microsoft.AI.WindowsServer.xml
 D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\bin\Microsoft.ApplicationInsights.xml
 D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-project\Project\Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportSource.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.Shared.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.Web.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\asus\Desktop\PSD-project\Project\Project\bin\stdole.dll

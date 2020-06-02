@@ -15,7 +15,7 @@ namespace Project.Handler
 
         public static List<DetailedTransactionHistories> getAllTransactionHistory()
         {
-            return TransactionRepository.getAllTransactionHistories();
+            return TransactionRepository.getAllTransactionHistory();
         }
     }
 }
