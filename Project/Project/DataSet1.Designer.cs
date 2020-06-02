@@ -325,7 +325,7 @@ namespace Project {
             
             private global::System.Data.DataColumn columnUserID;
             
-            private global::System.Data.DataColumn columnPaymentTypeID;
+            private global::System.Data.DataColumn columnDataColumn1;
             
             private global::System.Data.DataColumn columnTransactionDate;
             
@@ -380,9 +380,9 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PaymentTypeIDColumn {
+            public global::System.Data.DataColumn DataColumn1Column {
                 get {
-                    return this.columnPaymentTypeID;
+                    return this.columnDataColumn1;
                 }
             }
             
@@ -431,12 +431,12 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HeaderTransactionRow AddHeaderTransactionRow(string TransactionID, string UserID, string PaymentTypeID, string TransactionDate) {
+            public HeaderTransactionRow AddHeaderTransactionRow(string TransactionID, string UserID, string DataColumn1, string TransactionDate) {
                 HeaderTransactionRow rowHeaderTransactionRow = ((HeaderTransactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionID,
                         UserID,
-                        PaymentTypeID,
+                        DataColumn1,
                         TransactionDate};
                 rowHeaderTransactionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHeaderTransactionRow);
@@ -462,7 +462,7 @@ namespace Project {
             internal void InitVars() {
                 this.columnTransactionID = base.Columns["TransactionID"];
                 this.columnUserID = base.Columns["UserID"];
-                this.columnPaymentTypeID = base.Columns["PaymentTypeID"];
+                this.columnDataColumn1 = base.Columns["DataColumn1"];
                 this.columnTransactionDate = base.Columns["TransactionDate"];
             }
             
@@ -473,8 +473,8 @@ namespace Project {
                 base.Columns.Add(this.columnTransactionID);
                 this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserID);
-                this.columnPaymentTypeID = new global::System.Data.DataColumn("PaymentTypeID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPaymentTypeID);
+                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDataColumn1);
                 this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransactionDate);
             }
@@ -957,17 +957,17 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PaymentTypeID {
+            public string DataColumn1 {
                 get {
                     try {
-                        return ((string)(this[this.tableHeaderTransaction.PaymentTypeIDColumn]));
+                        return ((string)(this[this.tableHeaderTransaction.DataColumn1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PaymentTypeID\' in table \'HeaderTransaction\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn1\' in table \'HeaderTransaction\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableHeaderTransaction.PaymentTypeIDColumn] = value;
+                    this[this.tableHeaderTransaction.DataColumn1Column] = value;
                 }
             }
             
@@ -1013,14 +1013,14 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPaymentTypeIDNull() {
-                return this.IsNull(this.tableHeaderTransaction.PaymentTypeIDColumn);
+            public bool IsDataColumn1Null() {
+                return this.IsNull(this.tableHeaderTransaction.DataColumn1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPaymentTypeIDNull() {
-                this[this.tableHeaderTransaction.PaymentTypeIDColumn] = global::System.Convert.DBNull;
+            public void SetDataColumn1Null() {
+                this[this.tableHeaderTransaction.DataColumn1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
