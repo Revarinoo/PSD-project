@@ -10,9 +10,9 @@ namespace Project.Controller
 {
     public class TransactionReportController
     {
-        public static DataSet1 getTransactionReportDataSet()
+        public static TokobediaDataSet getTransactionReportDataSet()
         {
-            DataSet1 dataset = new DataSet1();
+            TokobediaDataSet dataset = new TokobediaDataSet();
             var headerTransaction = dataset.HeaderTransaction;
             var detailTransaction = dataset.DetailTransaction;
 
@@ -24,7 +24,7 @@ namespace Project.Controller
                 row["TransactionID"] = h.TransactionID;
                 row["TransactionDate"] = h.Date;
                 row["UserID"] = h.UserID;
-                row["DataColumn1"] = h.PaymentTypeID;
+                row["PaymentTypeID"] = h.PaymentTypeID;
                 headerTransaction.Rows.Add(row);
 
                 List<DetailTransaction> details = TransactionReportHandler.getDetailTransaction(h.TransactionID);
