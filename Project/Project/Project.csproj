@@ -382,6 +382,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\UpdateCart.aspx.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>

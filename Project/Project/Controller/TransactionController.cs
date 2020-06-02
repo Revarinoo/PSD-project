@@ -45,32 +45,5 @@ namespace Project.Controller
             }
             deleteAllCart(userID);
         }
-
-        public static TokobediaDataSet getTransactionDataSet()
-        {
-            TokobediaDataSet dataset = new TokobediaDataSet();
-            var headerTransaction = dataset.HeaderTransactions;
-            var detailTransaction = dataset.DetailTransaction;
-
-            List<HeaderTransaction> header = TransactionHandler.getAllHeaderTransaction();
-
-            foreach(HeaderTransaction h in header)
-            {
-                var row = headerTransaction.NewRow();
-                row["Date"] = h.Date;
-                row["TransactionID"] = h.TransactionID;
-                row["UserID"] = h.UserID;
-                headerTransaction.Rows.Add(row);
-
-                List<DetailTransaction> details = TransactionHandler.getDetailTransaction(h.TransactionID);
-
-                foreach(DetailTransaction d in details)
-                {
-                    var rowDetail = detailTransaction.NewRow();
-                    rowDetail["Id"] = d.Id;
-                    rowDetail
-                }
-            }
-        }
-    }
+     }
 }

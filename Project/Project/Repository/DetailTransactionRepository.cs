@@ -23,5 +23,11 @@ namespace Project.Repository
             dbEntity.DetailTransactions.Add(dt);
             dbEntity.SaveChanges();
         }
+
+        public static List<DetailTransaction> getDetailTransaction(int transactionID)
+        {
+            List<DetailTransaction> detailList = (from x in dbEntity.DetailTransactions where x.TransactionID == transactionID select x).ToList();
+            return detailList;
+        }
     }
 }

@@ -20,5 +20,6 @@ namespace Project.Model
     
         public virtual Product Product { get; set; }
         public virtual HeaderTransaction HeaderTransaction { get; set; }
+        public object Products { get; internal set; }
     }
 }
