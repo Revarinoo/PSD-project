@@ -146,9 +146,6 @@
     <Content Include="View\Register.aspx" />
     <Content Include="View\Site1.Master" />
     <Content Include="View\Site2.Master" />
-    <Content Include="View\TokobediaDataSet.xsc">
-      <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
-    </Content>
     <Content Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
@@ -159,14 +156,6 @@
     </None>
     <Content Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Content>
-    <None Include="View\TokobediaDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TokobediaDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="View\TokobediaDataSet.xss">
-      <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -390,23 +379,12 @@
     <Compile Include="View\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
-    <Compile Include="View\TokobediaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\TransactionHistory.aspx.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\TransactionHistory.aspx.designer.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\TransactionReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TransactionReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\UpdateCart.aspx.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>
@@ -518,10 +496,6 @@
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\TransactionReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TransactionReport.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
