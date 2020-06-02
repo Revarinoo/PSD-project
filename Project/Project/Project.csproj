@@ -195,6 +195,7 @@
     <Compile Include="Controller\InsertProductTypeController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\TransactionHistoryController.cs" />
+    <Compile Include="Controller\TransactionReportController.cs" />
     <Compile Include="Controller\UpdateCartController.cs" />
     <Compile Include="Controller\UpdatePaymentTypeController.cs" />
     <Compile Include="Controller\UpdateProductController.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\TransactionHistoryHandler.cs" />
+    <Compile Include="Handler\TransactionReportHandler.cs" />
     <Compile Include="Handler\UpdateCartHandler.cs" />
     <Compile Include="Handler\UpdatePaymentTypeHandler.cs" />
     <Compile Include="Handler\UpdateProductHandler.cs" />
