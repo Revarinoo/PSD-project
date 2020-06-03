@@ -13,9 +13,26 @@ namespace Project.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CrystalReport1 report = new CrystalReport1();
-            LoadReport(report);
-            TransactionReportViewer.ReportSource = report;
+                if(Session["user"] != null)
+                {
+                    User us = (User)Session["user"];
+                    if(us.RoleID == 1)
+                    {
+                        CrystalReport1 report = new CrystalReport1();
+                        LoadReport(report);
+                        TransactionReportViewer.ReportSource = report;
+                    }
+                    else
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
+
+            
         }
 
         private void LoadReport(CrystalReport1 report)
