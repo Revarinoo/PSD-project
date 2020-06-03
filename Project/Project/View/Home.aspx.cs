@@ -41,6 +41,7 @@ namespace Project.View
         private void SettingButton()
         {
             btnChangePassword.Visible = false;
+            btnViewTransactionHistory.Visible = false;
             btnViewUser.Visible = false;
             btnInsertProduct.Visible = false;
             btnUpdateProduct.Visible = false;
@@ -58,6 +59,7 @@ namespace Project.View
         private void AdminButton()
         {
             btnChangePassword.Visible = true;
+            btnViewTransactionHistory.Visible = true;
             btnViewUser.Visible = true;
             btnInsertProduct.Visible = true;
             btnUpdateProduct.Visible = true;
@@ -157,5 +159,9 @@ namespace Project.View
             Response.Redirect("ViewTransactionReport.aspx");
         }
 
+        protected void btnViewTransactionHistory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TransactionHistory.asp");
+        }
     }
 }
