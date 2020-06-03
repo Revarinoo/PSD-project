@@ -89,3 +89,6 @@ C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportApp
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\asus\Desktop\PSD-project\Project\Project\bin\stdole.dll
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-Project-FIX\PSD-project\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-Project-FIX\PSD-project\Project\Project\obj\Debug\Project.dll
+D:\Binus\2019, Even Semester\Pattern Software Design\Lab\Project Kelompok\PSD-Project-FIX\PSD-project\Project\Project\obj\Debug\Project.pdb
