@@ -10,9 +10,9 @@ namespace Project.Controller
 {
     public class TransactionReportController
     {
-        public static TokobediaDataSet getTransactionReportDataSet()
+        public static DataSet1 getTransactionReportDataSet()
         {
-            TokobediaDataSet dataset = new TokobediaDataSet();
+            DataSet1 dataset = new DataSet1();
             var headerTransaction = dataset.HeaderTransaction;
             var detailTransaction = dataset.DetailTransaction;
 
