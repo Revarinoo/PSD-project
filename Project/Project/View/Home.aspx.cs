@@ -161,7 +161,7 @@ namespace Project.View
 
         protected void btnViewTransactionHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TransactionHistory.asp");
+            Response.Redirect("TransactionHistory.aspx");
         }
     }
 }

@@ -35,7 +35,7 @@
     <asp:Button ID="btnViewTransactionReport" runat="server" class="btn btn-outline-info" Text="Transaction Report" OnClick="btnViewTransactionReport_Click" />
             &nbsp;&nbsp;&nbsp;
             
-            <asp:Button ID="btnViewTransactionHistory" runat="server" class="btn btn-outline-info" Text="Button" OnClick="btnViewTransactionHistory_Click"/>
+            <asp:Button ID="btnViewTransactionHistory" runat="server" class="btn btn-outline-info" Text="Transaction History" OnClick="btnViewTransactionHistory_Click"/>
             
         </p>
 
