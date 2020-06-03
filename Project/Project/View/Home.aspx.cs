@@ -28,7 +28,7 @@ namespace Project.View
                 else if(us.RoleID == 2)
                 {
                         btnChangePassword.Visible = true;
-                    GridViewCart.Columns[0].Visible = true;
+                        GridViewCart.Columns[0].Visible = true;
                 }
                 
                 LblMessage.Visible = true;
@@ -40,6 +40,7 @@ namespace Project.View
 
         private void SettingButton()
         {
+            btnChangePassword.Visible = false;
             btnViewUser.Visible = false;
             btnInsertProduct.Visible = false;
             btnUpdateProduct.Visible = false;
@@ -56,6 +57,7 @@ namespace Project.View
 
         private void AdminButton()
         {
+            btnChangePassword.Visible = true;
             btnViewUser.Visible = true;
             btnInsertProduct.Visible = true;
             btnUpdateProduct.Visible = true;
@@ -100,7 +102,7 @@ namespace Project.View
             Response.Redirect("ViewProduct.aspx");
         }
 
-        protected void btnChangePassword_Clicked(object sender, EventArgs e)
+        protected void DoChangePassword(object sender, EventArgs e)
         {
             Response.Redirect("ChangePassword.aspx");
         }
