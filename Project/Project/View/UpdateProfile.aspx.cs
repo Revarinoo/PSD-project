@@ -17,10 +17,15 @@ namespace Project.View
             us = (User)Session["user"];
             if(Session["user"] != null)
             {
-                EmailUpdateTextBox.Text = us.Email;
-                UserNameUpdateTextBox.Text = us.Name;
-                //Bkin checked sesuai gender masing - masing;
-                
+                if (!IsPostBack)
+                {
+                    EmailUpdateTextBox.Text = us.Email;
+                    UserNameUpdateTextBox.Text = us.Name;
+                    RadioButtonGender.Text = us.Gender;
+                }
+            }else
+            {
+                Response.Redirect("Home.aspx");
             }
         }
 
