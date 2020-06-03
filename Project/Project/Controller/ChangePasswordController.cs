@@ -13,7 +13,7 @@ namespace Project.Controller
         {
             User pass = ChangePasswordHandler.checkOldPassword(userID, oldpass);
             errorMsg = "";
-            if(pass == null)
+            if(pass == null || pass.Password != oldpass)
             {
                 errorMsg = "Old Password not match";
                 return false;
@@ -23,6 +23,11 @@ namespace Project.Controller
                 errorMsg = "Data must be filled!";
                 return false;
             }
+            else if(oldpass == newpass)
+            {
+                errorMsg = "New password must be different from old password";
+                return false;
+            }
             else if(newpass != confpass)
             {
                 errorMsg = "Confirmation password must be same with New Password!";
@@ -30,9 +35,14 @@ namespace Project.Controller
             }
             else
             {
-                ChangePasswordHandler.ChangePassword(userID, oldpass, newpass);
+                //ChangePasswordHandler.ChangePassword(userID, oldpass, newpass);
                 return true;
             }
+        }
+
+        public static void changePassword(int id, string oldpass, string newpass)
+        {
+            ChangePasswordHandler.ChangePassword(id, oldpass, newpass); 
         }
     }
 }

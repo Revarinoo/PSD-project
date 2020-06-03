@@ -46,7 +46,7 @@ namespace Project.View
             bool success = UpdateProfileController.validateUpdate(userID, name, email, gender, out errorMsg);
             if (success)
             {
-                Response.Redirect("Profile.aspx");
+                Response.Redirect("ViewProfile.aspx");
             }else
             {
                 labelError.Text = errorMsg;

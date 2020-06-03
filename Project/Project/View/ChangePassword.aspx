@@ -8,7 +8,7 @@
             <td class="auto-style1 fontt font-weight-bold">Old Password</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:TextBox ID="OldPassTextBox" runat="server" TabIndex="1" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="OldPassTextBox" runat="server" TabIndex="1" Width="300px" TextMode="Password"></asp:TextBox>
                 <%--<asp:RequiredFieldValidator ID="RequiredInsert1" runat="server" ControlToValidate="productName" EnableClientScript="False" ErrorMessage="Must be filled!" ForeColor="Red"></asp:RequiredFieldValidator>--%>
             </td>
         </tr>
@@ -16,14 +16,14 @@
             <td class="auto-style1 fontt font-weight-bold">New Password</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:TextBox ID="NewPassTextBox" runat="server" TabIndex="2" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="NewPassTextBox" runat="server" TabIndex="2" Width="300px" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style1 fontt font-weight-bold">Confirm Password</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:TextBox ID="ConfirmPassTextBox" runat="server" TabIndex="2" Width="300px"></asp:TextBox>
+                <asp:TextBox ID="ConfirmPassTextBox" runat="server" TabIndex="2" Width="300px" TextMode="Password"></asp:TextBox>
             </td>
 
         </tr>

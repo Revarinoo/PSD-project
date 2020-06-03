@@ -28,16 +28,6 @@ namespace Project.Repository
                             Status = x.Status
                         });
             return user.ToList();
-            //var view = (from x in dbEntity.Users
-            //            select new User()
-            //            {
-            //                UserID = x.UserID,
-            //                Name = x.Name,
-            //                RoleID = x.RoleID,
-            //                Status = x.Status
-            //            });
-
-            //return view.ToList();
         }
 
         public static void RegisterUser(String name, String email, String pass, String gender)

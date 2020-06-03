@@ -32,14 +32,16 @@ namespace Project.View
             string confpass = ConfirmPassTextBox.Text.ToString();
 
             string errorMsg = "";
-            labelError.Visible = true;
             bool success = ChangePasswordController.validatePassword(us.UserID, oldpass, newpass, confpass, out errorMsg);
-            if (success)
+            if (!success)
             {
-                Response.Redirect("Profile.aspx");
-            }else
-            {
+                labelError.Visible = true;
                 labelError.Text = errorMsg;
+            }
+            else
+            {
+                ChangePasswordController.changePassword(us.UserID, oldpass, newpass);
+                Response.Redirect("Profile.aspx");
             }
         }
 
