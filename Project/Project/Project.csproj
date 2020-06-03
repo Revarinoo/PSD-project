@@ -146,15 +146,15 @@
     <Content Include="View\Register.aspx" />
     <Content Include="View\Site1.Master" />
     <Content Include="View\Site2.Master" />
-    <Content Include="View\TokobediaDataSet.xsc">
+    <Content Include="TokobediaDataSet.xsc">
       <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
     </Content>
-    <None Include="View\TokobediaDataSet.xsd">
+    <None Include="TokobediaDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TokobediaDataSet.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="View\TokobediaDataSet.xss">
+    <Content Include="TokobediaDataSet.xss">
       <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
@@ -291,6 +291,16 @@
     <Compile Include="Repository\ProductTypeRepository.cs" />
     <Compile Include="Repository\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="TokobediaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionReport.rpt</DependentUpon>
+    </Compile>
     <Compile Include="View\AddtoCart.aspx.cs">
       <DependentUpon>AddtoCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -368,23 +378,12 @@
     <Compile Include="View\Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
-    <Compile Include="View\TokobediaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TokobediaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\TransactionHistory.aspx.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\TransactionHistory.aspx.designer.cs">
       <DependentUpon>TransactionHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\TransactionReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TransactionReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\UpdateCart.aspx.cs">
       <DependentUpon>UpdateCart.aspx</DependentUpon>
@@ -493,7 +492,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\TransactionReport.rpt">
+    <EmbeddedResource Include="TransactionReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TransactionReport.cs</LastGenOutput>
     </EmbeddedResource>
