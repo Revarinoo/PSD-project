@@ -27,6 +27,7 @@ namespace Project.View
                 }
                 else if(us.RoleID == 2)
                 {
+                        btnChangePassword.Visible = true;
                     GridViewCart.Columns[0].Visible = true;
                 }
                 
@@ -99,6 +100,11 @@ namespace Project.View
             Response.Redirect("ViewProduct.aspx");
         }
 
+        protected void btnChangePassword_Clicked(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangePassword.aspx");
+        }
+
         protected void btnInsertProduct_Click(object sender, EventArgs e)
         {
             Response.Redirect("InsertProduct.aspx");
@@ -148,5 +154,6 @@ namespace Project.View
         {
             Response.Redirect("ViewTransactionReport.aspx");
         }
+
     }
 }

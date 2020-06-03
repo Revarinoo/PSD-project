@@ -12,6 +12,8 @@
             <asp:Button ID="btnViewProduct" runat="server" class="btn btn-outline-info" Text="View Product" OnClick="DoViewProduct" />
 
             &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnChangePassword" runat="server" class="btn btn-outline-info" Text="Change Password" Visible="False" OnClick="btnChangePassword_Clicked"/>
+    &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnViewUser" runat="server" class="btn btn-outline-info" Text="View User" OnClick="btnViewUser_Click" />
             &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnInsertProduct" runat="server" class="btn btn-outline-info" Text="Insert Product" OnClick="btnInsertProduct_Click" />
