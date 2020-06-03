@@ -13,12 +13,12 @@ namespace Project.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TokobediaReport report = new TokobediaReport();
+            CrystalReport1 report = new CrystalReport1();
             LoadReport(report);
             TransactionReportViewer.ReportSource = report;
         }
 
-        private void LoadReport(TokobediaReport report)
+        private void LoadReport(CrystalReport1 report)
         {
             DataSet1 dataset = TransactionReportController.getTransactionReportDataSet();
             report.SetDataSource(dataset);
