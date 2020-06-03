@@ -11,12 +11,12 @@ namespace Project.View
 {
     public partial class ChangePassword : System.Web.UI.Page
     {
-        private User us;
+        //private User us;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                us = (User)Session["user"];
+                User us = (User)Session["user"];
                 if(Session["user"] == null)
                 {
 
@@ -27,6 +27,7 @@ namespace Project.View
 
         protected void changepassBtn_Click(object sender, EventArgs e)
         {
+            User us = (User)Session["user"];
             string oldpass = OldPassTextBox.Text.ToString();
             string newpass = NewPassTextBox.Text.ToString();
             string confpass = ConfirmPassTextBox.Text.ToString();
@@ -40,8 +41,7 @@ namespace Project.View
             }
             else
             {
-                ChangePasswordController.changePassword(us.UserID, oldpass, newpass);
-                Response.Redirect("Profile.aspx");
+                Response.Redirect("ViewProfile.aspx");
             }
         }
 

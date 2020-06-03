@@ -51,11 +51,19 @@ namespace Project.Repository
                     select x).FirstOrDefault();
         }
 
-        public static User checkOldPassword(int id, string oldpass)
+        public static bool checkOldPassword(int id, string oldpass)
         {
-            return (from x in dbEntity.Users
-                    where x.UserID == id && x.Password == oldpass
-                    select x).FirstOrDefault();
+            User usr = (from x in dbEntity.Users
+                        where x.UserID == id && x.Password == oldpass
+                        select x).FirstOrDefault();
+            if(usr == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public static User doLogin(string email, string password)

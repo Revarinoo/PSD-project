@@ -11,31 +11,36 @@ namespace Project.Controller
     {
         public static bool validatePassword(int userID, string oldpass, string newpass, string confpass, out string errorMsg)
         {
-            User pass = ChangePasswordHandler.checkOldPassword(userID, oldpass);
+            bool pass = ChangePasswordHandler.checkOldPassword(userID, oldpass);
             errorMsg = "";
-            if(pass == null || pass.Password != oldpass)
+            if(!pass)
             {
                 errorMsg = "Old Password not match";
                 return false;
             }
-            else if(newpass == "")
+            else if (newpass == "" || oldpass == "" || confpass == "")
             {
                 errorMsg = "Data must be filled!";
                 return false;
             }
-            else if(oldpass == newpass)
+            else if (oldpass == newpass)
             {
                 errorMsg = "New password must be different from old password";
                 return false;
             }
-            else if(newpass != confpass)
+            else if (newpass != confpass)
             {
                 errorMsg = "Confirmation password must be same with New Password!";
                 return false;
             }
+            else if(newpass.Length <= 5)
+            {
+                errorMsg = "Must be longer than 5 characters";
+                return false;
+            }
             else
             {
-                //ChangePasswordHandler.ChangePassword(userID, oldpass, newpass);
+                changePassword(userID, oldpass, newpass);
                 return true;
             }
         }

@@ -9,7 +9,7 @@ namespace Project.Handler
 {
     public class ChangePasswordHandler
     {
-        public static User checkOldPassword(int userID, string oldpass)
+        public static bool checkOldPassword(int userID, string oldpass)
         {
             return UserRepository.checkOldPassword(userID, oldpass);
         }
