@@ -11,7 +11,7 @@
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
-                        <%--<asp:LinkButton  ID="TransactionReportRedirect" class="btn btn-outline-light py-0" CommandArgument='<%# Eval("TransactionID")%>' runat="server" >Transaction Report</asp:LinkButton>--%>
+                        <asp:Button OnClick="TransactionReport_Click" ID="btnReport" Text="Transaction Report" runat="server" class="btn btn-outline-light py-0" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

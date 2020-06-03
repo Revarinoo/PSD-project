@@ -18,9 +18,11 @@ namespace Project.View
                 User us = (User)Session["user"];
                 if (Session["user"] != null)
                 {
+                    GridTransactionHistory.Columns[0].Visible = false;
                     if (us.RoleID == 1)
                     {
                         // admin do something
+                        GridTransactionHistory.Columns[0].Visible = true;
                         GridTransactionHistory.DataSource = TransactionHistoryController.getAllTransactionHistory();
                         GridTransactionHistory.DataBind();
                     }
@@ -36,6 +38,11 @@ namespace Project.View
                     Response.Redirect("home.aspx");
                 }
                 }
+        }
+
+        protected void TransactionReport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewTransactionReport.aspx");
         }
     }
 }

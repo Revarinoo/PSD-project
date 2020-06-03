@@ -85,14 +85,14 @@ namespace Project.Repository
         public static void changeStatus(int id)
         {
             User usr = (User)dbEntity.Users.Where(u => u.UserID == id).FirstOrDefault();
-            if(usr.Status == "active")
+            if(usr.Status == "Active")
             {
-                usr.Status = "block";
+                usr.Status = "Block";
                 dbEntity.SaveChanges();
             }
-            else if(usr.Status == "block")
+            else if(usr.Status == "Block")
             {
-                usr.Status = "active";
+                usr.Status = "Active";
                 dbEntity.SaveChanges();
             }
         }
