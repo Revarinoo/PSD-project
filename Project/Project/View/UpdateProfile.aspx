@@ -24,7 +24,7 @@
             <td class="auto-style1 fontt font-weight-bold">Gender</td>
             <td class="auto-style3 fontt font-weight-bold">:</td>
             <td>
-                <asp:RadioButtonList ID="RadioButtonGender" class="fontt font-weight-bold" runat="server" OnSelectedIndexChanged="RadioButtonGender_SelectedIndexChanged">
+                <asp:RadioButtonList ID="RadioButtonGender" class="fontt font-weight-bold" runat="server">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:RadioButtonList>

@@ -6,3 +6,7 @@ Project/Project/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Project/.vs/Project/v14/.suo
 *.config
 *.cache
+Project/.vs/Project/v14/.suo
+*.mdf
+*.ldf
+*.cache
