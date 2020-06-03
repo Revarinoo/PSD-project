@@ -18,7 +18,22 @@ namespace Project.Controller
                 errorMsg = "Email already exists!";
                 return false;
             }
-            else if(name == "" || email == "")
+            else if(email == "")
+            {
+                errorMsg = "Data must be filled!";
+                return false;
+            }
+            else if (!email.EndsWith(".com"))
+            {
+                errorMsg = "Email must be end with '.com'";
+                return false;
+            }
+            else if (!email.Contains("@"))
+            {
+                errorMsg = "Email must be contain '@' ";
+                return false;
+            }
+            else if(name == "")
             {
                 errorMsg = "Data must be filled!";
                 return false;

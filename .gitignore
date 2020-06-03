@@ -4,3 +4,9 @@ Project/Project/App_Data/Tokobedia.mdf
 Project/Project/App_Data/Tokobedia_log.ldf
 Project/Project/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Project/.vs/Project/v14/.suo
+*.config
+*.cache
+Project/.vs/Project/v14/.suo
+*.mdf
+*.ldf
+*.cache
