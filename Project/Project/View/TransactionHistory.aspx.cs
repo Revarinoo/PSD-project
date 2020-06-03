@@ -44,5 +44,10 @@ namespace Project.View
         {
             Response.Redirect("ViewTransactionReport.aspx");
         }
+
+        protected void BacktoHomeBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
     }
 }
