@@ -37,6 +37,7 @@ namespace Project.Controller
                     rowDetail["ProductName"] = d.Product.Name;
                     rowDetail["ProductPrice"] = d.Product.Price;
                     rowDetail["Quantity"] = d.Quantity;
+                    rowDetail["SubTotal"] = d.Quantity * d.Product.Price;
                     detailTransaction.Rows.Add(rowDetail);
                 }
             }

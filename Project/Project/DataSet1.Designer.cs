@@ -620,6 +620,8 @@ namespace Project {
             
             private global::System.Data.DataColumn columnQuantity;
             
+            private global::System.Data.DataColumn columnSubTotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DetailTransactionDataTable() {
@@ -695,6 +697,14 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SubTotalColumn {
+                get {
+                    return this.columnSubTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -730,14 +740,15 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DetailTransactionRow AddDetailTransactionRow(HeaderTransactionRow parentHeaderTransactionRowByHeaderTransaction_DetailTransaction, string ProductID, string ProductName, string ProductPrice, string Quantity) {
+            public DetailTransactionRow AddDetailTransactionRow(HeaderTransactionRow parentHeaderTransactionRowByHeaderTransaction_DetailTransaction, string ProductID, string ProductName, string ProductPrice, string Quantity, string SubTotal) {
                 DetailTransactionRow rowDetailTransactionRow = ((DetailTransactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ProductID,
                         ProductName,
                         ProductPrice,
-                        Quantity};
+                        Quantity,
+                        SubTotal};
                 if ((parentHeaderTransactionRowByHeaderTransaction_DetailTransaction != null)) {
                     columnValuesArray[0] = parentHeaderTransactionRowByHeaderTransaction_DetailTransaction[0];
                 }
@@ -768,6 +779,7 @@ namespace Project {
                 this.columnProductName = base.Columns["ProductName"];
                 this.columnProductPrice = base.Columns["ProductPrice"];
                 this.columnQuantity = base.Columns["Quantity"];
+                this.columnSubTotal = base.Columns["SubTotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -783,6 +795,8 @@ namespace Project {
                 base.Columns.Add(this.columnProductPrice);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
+                this.columnSubTotal = new global::System.Data.DataColumn("SubTotal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubTotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1143,6 +1157,22 @@ namespace Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SubTotal {
+                get {
+                    try {
+                        return ((string)(this[this.tableDetailTransaction.SubTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SubTotal\' in table \'DetailTransaction\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetailTransaction.SubTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public HeaderTransactionRow HeaderTransactionRow {
                 get {
                     return ((HeaderTransactionRow)(this.GetParentRow(this.Table.ParentRelations["HeaderTransaction_DetailTransaction"])));
@@ -1210,6 +1240,18 @@ namespace Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetQuantityNull() {
                 this[this.tableDetailTransaction.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSubTotalNull() {
+                return this.IsNull(this.tableDetailTransaction.SubTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSubTotalNull() {
+                this[this.tableDetailTransaction.SubTotalColumn] = global::System.Convert.DBNull;
             }
         }
         
