@@ -16,21 +16,26 @@ namespace Project.View
             if (!IsPostBack)
             {
                 User us = (User)Session["user"];
-                if(Session["user"] != null)
+                if (Session["user"] != null)
                 {
-                    if(us.RoleID == 1)
+                    if (us.RoleID == 1)
                     {
                         // admin do something
                         GridTransactionHistory.DataSource = TransactionHistoryController.getAllTransactionHistory();
+                        GridTransactionHistory.DataBind();
                     }
                     else
                     {
                         int userID = us.UserID;
                         GridTransactionHistory.DataSource = TransactionHistoryController.getTransactionHistory(userID);
                         GridTransactionHistory.DataBind();
+                        }
                     }
+                else
+                {
+                    Response.Redirect("home.aspx");
                 }
-            }
+                }
         }
     }
 }
