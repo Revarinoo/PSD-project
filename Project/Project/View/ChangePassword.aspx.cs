@@ -16,6 +16,7 @@ namespace Project.View
         {
             if (!IsPostBack)
             {
+                labelError.Visible = false;
                 User us = (User)Session["user"];
                 if(Session["user"] == null)
                 {

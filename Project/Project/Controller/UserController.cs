@@ -18,6 +18,11 @@ namespace Project.Controller
                 errorMsg = "Email already exists!";
                 return false;
             }
+            else if(password.Length <= 5)
+            {
+                errorMsg = "Must be longer than 5 characters";
+                return false;
+            }
             else if (!conf.Equals(password))
             {
                 errorMsg = "Password must be same!";
@@ -26,6 +31,16 @@ namespace Project.Controller
             else if (name.Equals("") || email.Equals("") || password.Equals("") || conf.Equals("") || gender.Equals(""))
             {
                 errorMsg = "Data must be filled!";
+                return false;
+            }
+            else if (!email.Contains("@"))
+            {
+                errorMsg = "Please include an @ in the email address.";
+                return false;
+            }
+            else if (!email.EndsWith(".com"))
+            {
+                errorMsg = "Email must ends with .com";
                 return false;
             }
             else

@@ -17,6 +17,7 @@ namespace Project.View
             us = (User)Session["user"];
             if(Session["user"] != null)
             {
+                labelError.Visible = false;
                 if (!IsPostBack)
                 {
                     EmailUpdateTextBox.Text = us.Email;
