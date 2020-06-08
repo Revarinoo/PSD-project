@@ -12,20 +12,20 @@ namespace Project.Controller
         public static bool validateUpdate(int userID, string name, string email, string gender, out string errorMsg)
         {
             User usr = UpdateProfileHandler.SearchByEmail(email);
-            errorMsg= "";
+            errorMsg = "";
             if (usr != null)
             {
                 errorMsg = "Email already exists!";
                 return false;
             }
-            else if(email == "")
+            else if (email == "")
             {
                 errorMsg = "Data must be filled!";
                 return false;
             }
-            else if (!email.EndsWith(".com"))
+            else if (!email.EndsWith(".com") || !email.EndsWith(".net"))
             {
-                errorMsg = "Email must be end with '.com'";
+                errorMsg = "Email must be end with .com or .net";
                 return false;
             }
             else if (!email.Contains("@"))

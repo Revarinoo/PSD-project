@@ -22,7 +22,7 @@ namespace Project.Repository
                            select new DetailedTransactionHistories()
 
                            {
-                               TransactionDate = ht.Date,
+                               TransactionDate = ht.Date.Date,
                                PaymentType = pt.Type,
                                ProductName = p.Name,
                                ProductQuantity = dt.Quantity,
@@ -43,7 +43,7 @@ namespace Project.Repository
                            select new DetailedTransactionHistories()
 
                            {
-                               TransactionDate = ht.Date,
+                               TransactionDate = ht.Date.Date,
                                PaymentType = pt.Type,
                                ProductName = p.Name,
                                ProductQuantity = dt.Quantity,

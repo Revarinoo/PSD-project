@@ -38,9 +38,9 @@ namespace Project.Controller
                 errorMsg = "Please include an @ in the email address.";
                 return false;
             }
-            else if (!email.EndsWith(".com"))
+            else if (!email.EndsWith(".com") || !email.EndsWith(".net"))
             {
-                errorMsg = "Email must ends with .com";
+                errorMsg = "Email must ends with .com or .net";
                 return false;
             }
             else
