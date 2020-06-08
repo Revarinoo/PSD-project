@@ -25,11 +25,6 @@ namespace Project.Controller
             return InsertProductHandler.SearchByName(type);
         }
 
-        public static Product validateInsert(int stock, int price)
-        {
-            return InsertProductHandler.ValidateInsert(stock, price);
-        }
-
         public static bool Insert(string name, int stock, int price, string type, out string errorMsg)
         {
             errorMsg = "";
@@ -45,8 +40,8 @@ namespace Project.Controller
             }
             else
             {
-                var pr = validateInsert(stock, price);
-                if (pr != null && !name.Equals("") && stock != null && price != null)
+
+                if (stock >= 1 && price > 1000 && price % 1000 == 0)
                 {
                     errorMsg = "Success!";
                     return true;
