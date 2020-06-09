@@ -41,8 +41,12 @@ namespace Project.View
 
         protected void ChangeStatusButton_Click(object send, EventArgs e)
         {
+            User us = (User)Session["user"];
             int id = Int32.Parse((send as LinkButton).CommandArgument);
-            ChangeStatusController.ChangeStatus(id);
+            if(us.UserID != id)
+            {
+                ChangeStatusController.ChangeStatus(id);
+            }
             Response.Redirect("ViewUser.aspx");
         }
     }
