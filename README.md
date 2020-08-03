@@ -18,9 +18,9 @@ The model layer is responsible for representing concepts in the business or info
 
 There are three types of user roles on this website: Administrator, Member, and Guest (non-logged-in user). Below are the minimum pages you need to create for each role:
 -	Administrator
-	View User
-	View Payment Type
-	Insert Payment Type
+    -> View User
+    -> View Payment Type
+    -> Insert Payment Type
 	Update Payment Type
 	View Product
 	Insert Product
